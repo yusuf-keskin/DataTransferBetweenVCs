@@ -9,21 +9,33 @@
 /* Begin PBXBuildFile section */
 		32AD086828E2191D00F5A3B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AD086728E2191D00F5A3B3 /* AppDelegate.swift */; };
 		32AD086A28E2191D00F5A3B3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AD086928E2191D00F5A3B3 /* SceneDelegate.swift */; };
-		32AD086C28E2191D00F5A3B3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AD086B28E2191D00F5A3B3 /* ViewController.swift */; };
+		32AD086C28E2191D00F5A3B3 /* FirstVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AD086B28E2191D00F5A3B3 /* FirstVC.swift */; };
 		32AD086F28E2191D00F5A3B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32AD086D28E2191D00F5A3B3 /* Main.storyboard */; };
 		32AD087128E2191F00F5A3B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32AD087028E2191F00F5A3B3 /* Assets.xcassets */; };
 		32AD087428E2191F00F5A3B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32AD087228E2191F00F5A3B3 /* LaunchScreen.storyboard */; };
+		32AD087C28E21A7800F5A3B3 /* SecondVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AD087B28E21A7800F5A3B3 /* SecondVC.swift */; };
+		32AD087E28E21BEA00F5A3B3 /* ColorTransferProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AD087D28E21BEA00F5A3B3 /* ColorTransferProtocol.swift */; };
+		32AD088028E2362700F5A3B3 /* KVO Class.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AD087F28E2362700F5A3B3 /* KVO Class.swift */; };
+		32AD088228E23FDC00F5A3B3 /* KVO Observer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AD088128E23FDC00F5A3B3 /* KVO Observer.swift */; };
+		32AD088428E2445600F5A3B3 /* NSNotification Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AD088328E2445600F5A3B3 /* NSNotification Extension.swift */; };
+		32AD088628E2466300F5A3B3 /* CatClassForNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AD088528E2466300F5A3B3 /* CatClassForNotification.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		32AD086428E2191D00F5A3B3 /* Data Transfer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Data Transfer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		32AD086728E2191D00F5A3B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		32AD086928E2191D00F5A3B3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		32AD086B28E2191D00F5A3B3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		32AD086B28E2191D00F5A3B3 /* FirstVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstVC.swift; sourceTree = "<group>"; };
 		32AD086E28E2191D00F5A3B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		32AD087028E2191F00F5A3B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		32AD087328E2191F00F5A3B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		32AD087528E2191F00F5A3B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		32AD087B28E21A7800F5A3B3 /* SecondVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondVC.swift; sourceTree = "<group>"; };
+		32AD087D28E21BEA00F5A3B3 /* ColorTransferProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorTransferProtocol.swift; sourceTree = "<group>"; };
+		32AD087F28E2362700F5A3B3 /* KVO Class.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KVO Class.swift"; sourceTree = "<group>"; };
+		32AD088128E23FDC00F5A3B3 /* KVO Observer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KVO Observer.swift"; sourceTree = "<group>"; };
+		32AD088328E2445600F5A3B3 /* NSNotification Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSNotification Extension.swift"; sourceTree = "<group>"; };
+		32AD088528E2466300F5A3B3 /* CatClassForNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatClassForNotification.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,11 +70,17 @@
 			children = (
 				32AD086728E2191D00F5A3B3 /* AppDelegate.swift */,
 				32AD086928E2191D00F5A3B3 /* SceneDelegate.swift */,
-				32AD086B28E2191D00F5A3B3 /* ViewController.swift */,
+				32AD086B28E2191D00F5A3B3 /* FirstVC.swift */,
+				32AD087B28E21A7800F5A3B3 /* SecondVC.swift */,
 				32AD086D28E2191D00F5A3B3 /* Main.storyboard */,
 				32AD087028E2191F00F5A3B3 /* Assets.xcassets */,
 				32AD087228E2191F00F5A3B3 /* LaunchScreen.storyboard */,
 				32AD087528E2191F00F5A3B3 /* Info.plist */,
+				32AD087D28E21BEA00F5A3B3 /* ColorTransferProtocol.swift */,
+				32AD087F28E2362700F5A3B3 /* KVO Class.swift */,
+				32AD088128E23FDC00F5A3B3 /* KVO Observer.swift */,
+				32AD088328E2445600F5A3B3 /* NSNotification Extension.swift */,
+				32AD088528E2466300F5A3B3 /* CatClassForNotification.swift */,
 			);
 			path = "Data Transfer";
 			sourceTree = "<group>";
@@ -138,9 +156,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				32AD086C28E2191D00F5A3B3 /* ViewController.swift in Sources */,
+				32AD088028E2362700F5A3B3 /* KVO Class.swift in Sources */,
+				32AD087E28E21BEA00F5A3B3 /* ColorTransferProtocol.swift in Sources */,
+				32AD086C28E2191D00F5A3B3 /* FirstVC.swift in Sources */,
 				32AD086828E2191D00F5A3B3 /* AppDelegate.swift in Sources */,
 				32AD086A28E2191D00F5A3B3 /* SceneDelegate.swift in Sources */,
+				32AD088628E2466300F5A3B3 /* CatClassForNotification.swift in Sources */,
+				32AD087C28E21A7800F5A3B3 /* SecondVC.swift in Sources */,
+				32AD088428E2445600F5A3B3 /* NSNotification Extension.swift in Sources */,
+				32AD088228E23FDC00F5A3B3 /* KVO Observer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
