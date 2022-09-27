@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		32514B8B28E36E7900CD5A00 /* Coordinator Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32514B8A28E36E7900CD5A00 /* Coordinator Protocol.swift */; };
+		32514B8D28E36EB200CD5A00 /* StoryBoardedProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32514B8C28E36EB200CD5A00 /* StoryBoardedProtocol.swift */; };
+		32514B8F28E36F0500CD5A00 /* Main Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32514B8E28E36F0500CD5A00 /* Main Coordinator.swift */; };
+		32514B9128E3715B00CD5A00 /* SecondVC Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32514B9028E3715B00CD5A00 /* SecondVC Coordinator.swift */; };
 		32AD086828E2191D00F5A3B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AD086728E2191D00F5A3B3 /* AppDelegate.swift */; };
 		32AD086A28E2191D00F5A3B3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AD086928E2191D00F5A3B3 /* SceneDelegate.swift */; };
 		32AD086C28E2191D00F5A3B3 /* FirstVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AD086B28E2191D00F5A3B3 /* FirstVC.swift */; };
@@ -22,6 +26,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		32514B8A28E36E7900CD5A00 /* Coordinator Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Coordinator Protocol.swift"; sourceTree = "<group>"; };
+		32514B8C28E36EB200CD5A00 /* StoryBoardedProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryBoardedProtocol.swift; sourceTree = "<group>"; };
+		32514B8E28E36F0500CD5A00 /* Main Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Main Coordinator.swift"; sourceTree = "<group>"; };
+		32514B9028E3715B00CD5A00 /* SecondVC Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SecondVC Coordinator.swift"; sourceTree = "<group>"; };
 		32AD086428E2191D00F5A3B3 /* Data Transfer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Data Transfer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		32AD086728E2191D00F5A3B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		32AD086928E2191D00F5A3B3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +57,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		32514B8928E36E5C00CD5A00 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				32514B8A28E36E7900CD5A00 /* Coordinator Protocol.swift */,
+				32514B8C28E36EB200CD5A00 /* StoryBoardedProtocol.swift */,
+				32514B8E28E36F0500CD5A00 /* Main Coordinator.swift */,
+				32514B9028E3715B00CD5A00 /* SecondVC Coordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
 		32AD085B28E2191D00F5A3B3 = {
 			isa = PBXGroup;
 			children = (
@@ -68,6 +87,7 @@
 		32AD086628E2191D00F5A3B3 /* Data Transfer */ = {
 			isa = PBXGroup;
 			children = (
+				32514B8928E36E5C00CD5A00 /* Coordinator */,
 				32AD086728E2191D00F5A3B3 /* AppDelegate.swift */,
 				32AD086928E2191D00F5A3B3 /* SceneDelegate.swift */,
 				32AD086B28E2191D00F5A3B3 /* FirstVC.swift */,
@@ -157,12 +177,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				32AD088028E2362700F5A3B3 /* KVO Class.swift in Sources */,
+				32514B9128E3715B00CD5A00 /* SecondVC Coordinator.swift in Sources */,
 				32AD087E28E21BEA00F5A3B3 /* ColorTransferProtocol.swift in Sources */,
 				32AD086C28E2191D00F5A3B3 /* FirstVC.swift in Sources */,
+				32514B8B28E36E7900CD5A00 /* Coordinator Protocol.swift in Sources */,
 				32AD086828E2191D00F5A3B3 /* AppDelegate.swift in Sources */,
 				32AD086A28E2191D00F5A3B3 /* SceneDelegate.swift in Sources */,
+				32514B8F28E36F0500CD5A00 /* Main Coordinator.swift in Sources */,
 				32AD088628E2466300F5A3B3 /* CatClassForNotification.swift in Sources */,
 				32AD087C28E21A7800F5A3B3 /* SecondVC.swift in Sources */,
+				32514B8D28E36EB200CD5A00 /* StoryBoardedProtocol.swift in Sources */,
 				32AD088428E2445600F5A3B3 /* NSNotification Extension.swift in Sources */,
 				32AD088228E23FDC00F5A3B3 /* KVO Observer.swift in Sources */,
 			);

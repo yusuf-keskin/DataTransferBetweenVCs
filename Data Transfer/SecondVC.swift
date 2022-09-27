@@ -6,8 +6,10 @@
 //
 
 import UIKit
-
-class SecondVC: UIViewController {
+typealias completionHandler = (_ color : UIColor)->()
+class SecondVC: UIViewController, Storyboarded {
+    
+    weak var coordinator : SecondVCCoordinator?
     
     @IBOutlet weak var hungryCatLbl: UILabel!
     @IBOutlet weak var catNameLbl: UILabel!
@@ -15,19 +17,20 @@ class SecondVC: UIViewController {
     
     var delegate : ColorTransferDelegate?
     
-    typealias completionHandler = (_ color : UIColor)->()
+    
     var colorClosure : completionHandler?
     
     var kvoToken: NSKeyValueObservation?
     var newPerson = Person()
 
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        kvoToken = newPerson.observe(\.favoritePet, options: .new) { [self] (person, change) in
+        kvoToken = newPerson.observe(\.favoritePet, options: .new) { [weak self] (person, change) in
             guard let pet = change.newValue else { return }
-            catNameLbl.text = pet
+            self!.catNameLbl.text = pet
         }
         
 
@@ -35,7 +38,13 @@ class SecondVC: UIViewController {
         
 
     }
+ 
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        coordinator?.didFinishBuying()
+    }
     
+   
     @objc func notificationReceived(_ notification: Notification) {
         guard let cat = notification.userInfo?["text"] as? Cat else { return }
         hungryCatLbl.text = cat.hungryness
@@ -69,7 +78,7 @@ class SecondVC: UIViewController {
     }
     
     @IBAction func closeBtnTapped(_ sender: Any) {
-        dismiss(animated: true)
+        self.dismiss(animated: true)
     }
     
     

@@ -7,10 +7,12 @@
 
 import UIKit
 
-class FirstVC: UIViewController, ColorTransferDelegate {
+class FirstVC: UIViewController, ColorTransferDelegate, Storyboarded {
     
     //Notification center will send this as data
     var mycat = Cat()
+    
+    weak var coordinator : MainCoordinator?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,27 +22,15 @@ class FirstVC: UIViewController, ColorTransferDelegate {
     
     @IBAction func protocolDelegateDataTransferBtn(_ sender: Any) {
         let vc = storyboard?.instantiateViewController(withIdentifier: "SecondVC") as! SecondVC
-        
+
         //Delegate Trigger Backward
         vc.delegate = self
-        vc.modalPresentationStyle = .fullScreen
         present(vc, animated: true)
-        
+//    coordinator?.secondVCNotifTransferWithMethod(method: .delegate)
     }
     
     @IBAction func setCatHungrynessWithNotification(_ sender: Any) {
-        
-        //Define user Info for selection data to transfer
-        let userInfo = ["text" : mycat]
-        
-        //Delay notification otherwise action happen before vc initialized
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
-            NotificationCenter.default.post(name: NSNotification.catWaiting, object: self, userInfo: userInfo)
-        }
-        
-        let vc = storyboard?.instantiateViewController(withIdentifier: "SecondVC") as! SecondVC
-        vc.modalPresentationStyle = .fullScreen
-        present(vc, animated: true)
+        coordinator?.secondVCNotifTransferWithMethod(method: .notificationCenter)
     }
     
     
@@ -48,9 +38,9 @@ class FirstVC: UIViewController, ColorTransferDelegate {
         
         let vc = storyboard?.instantiateViewController(withIdentifier: "SecondVC") as! SecondVC
         //Closure trigger backward
-        vc.colorClosure = { color in
+        vc.colorClosure = { [weak self] color in
             DispatchQueue.main.async {
-                self.view.backgroundColor = color
+                self!.view.backgroundColor = color
             }
         }
         vc.modalPresentationStyle = .fullScreen
@@ -58,15 +48,7 @@ class FirstVC: UIViewController, ColorTransferDelegate {
     }
     
     @IBAction func catHungynessByKVO(_ sender: Any) {
-        let vc = storyboard?.instantiateViewController(withIdentifier: "SecondVC") as! SecondVC
-        
-        
-        // KVO trigger forward / backward?
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
-            vc.newPerson.favoritePet = "Demsy is a cat"
-        }
-        vc.modalPresentationStyle = .fullScreen
-        present(vc, animated: true)
+        coordinator?.secondVCNotifTransferWithMethod(method: .kvo)
     }
     
     
